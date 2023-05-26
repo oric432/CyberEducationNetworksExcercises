@@ -86,9 +86,10 @@ def send_photo(client_socket):
 
 def get_server_response(cmd):
     command = cmd.split(' ')[0]
-    args = re.findall(r"[A-Za-z]:\\(?:[A-Za-z0-9_\s]+\\)*[A-Za-z0-9_\s]*\.?[A-Za-z0-9_]*", cmd)
     if command == 'TAKE_SCREENSHOT':
         return take_screenshot()
+    
+    args = re.findall(r"[A-Za-z]:\\(?:[A-Za-z0-9_\s]+\\)*[A-Za-z0-9_\s]*\.?[A-Za-z0-9_]*", cmd)
 
     if not len(args):
         return 'Invalid file path'
