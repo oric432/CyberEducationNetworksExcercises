@@ -1,0 +1,12 @@
+# ignore all .env files
+*.env
+
+# ignore virtual enviornment
+venv
+venv/
+
+# ignore all compiled python files
+*.pyc
+
+# ignore .idea file
+.idea
